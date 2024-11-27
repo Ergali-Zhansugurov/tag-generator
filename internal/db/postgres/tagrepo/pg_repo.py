@@ -1,7 +1,7 @@
-from internal.db.postgres import get_connection
-from internal.core.interfaces.tag_repo import TagRepositoryInterface
+from internal.db.postgres import conn
+from internal.db.postgres import postgres_interfece
 
-class TagRepositoryPostgres(TagRepositoryInterface):
+class TagRepositoryPostgres(postgres_interfece):
     def save_tags(self, tags: list[str]):
         """Сохраняет уникальные теги в таблицу tags"""
         query = """
