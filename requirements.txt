@@ -1,0 +1,5 @@
+sentencepiece
+transformers
+torch
+flask
+psycopg2-binary

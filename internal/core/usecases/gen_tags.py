@@ -23,7 +23,7 @@ class GenerateTags:
             output_scores=True
         )
 
-        scores = torch.exp(outputs.sequences_scores)  
+        scores = torch.exp(outputs.sequences_scores)
         tags = [self.tokenizer.decode(output, skip_special_tokens=True).strip() for output in outputs.sequences]
 
         filtered_tags = [tag for tag, score in zip(tags, scores) if score >= self.threshold]
