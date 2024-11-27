@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "text-generator"
+version = "0.1.0"
+description = ""
+authors = ["Ergali-Zhansugurov <granbellsiki@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.11.9"
+torch = "^2.5.1"
+transformers = "^4.46.3"
+sentencepiece = "^0.2.0"
+protobuf = "^5.28.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
