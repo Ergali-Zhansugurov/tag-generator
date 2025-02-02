@@ -1,0 +1,9 @@
+import redis
+
+cache = redis.Redis(host="localhost", port=6379, db=0)
+
+def get_from_cache(key):
+    return cache.get(key)
+
+def set_to_cache(key, value):
+    cache.set(key, value)
